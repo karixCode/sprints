@@ -1,0 +1,51 @@
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+  }
+
+  &__logo {
+    flex-grow: 1;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 24px;
+    flex-grow: .5;
+  }
+
+  &__item {
+    transition-duration: $transition-duration;
+
+    &:hover {
+      color: $main-black;
+    }
+  }
+
+  &__languages {
+    display: flex;
+    gap: 2px;
+
+    &-item{
+      cursor: pointer;
+    }
+
+    &-active {
+      color: $color-blue;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    &__nav {
+      display: none;
+    }
+
+    &__languages {
+      display: none;
+    }
+  }
+}
+

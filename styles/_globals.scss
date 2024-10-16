@@ -7,7 +7,7 @@
 body {
     font-family: $font-main;
     font-weight: 400;
-    color: #424551;
+    color: $main-grey;
     font-size: 18px;
     line-height: 135%;
 }
@@ -40,6 +40,24 @@ a {
     max-width: 1268px;
     padding: 0 24px;
     margin: 0 auto;
+}
+
+.logo {
+    font-size: inherit;
+    color: $color-blue;
+}
+
+.button {
+    padding: 12px 24px;
+    color: $main-white;
+    background-color: $color-blue;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition-duration: $transition-duration;
+
+    &:hover {
+        background-color: $hover-blue;
+    }
 }
 
 

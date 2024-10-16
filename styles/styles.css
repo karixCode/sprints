@@ -17,7 +17,7 @@
 body {
   font-family: "VisueltPro", sans-serif;
   font-weight: 400;
-  color: #424551;
+  color: #808080;
   font-size: 18px;
   line-height: 135%;
 }
@@ -52,6 +52,23 @@ a {
   margin: 0 auto;
 }
 
+.logo {
+  font-size: inherit;
+  color: #4754eb;
+}
+
+.button {
+  padding: 12px 24px;
+  color: #ffffff;
+  background-color: #4754eb;
+  border-radius: 16px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.button:hover {
+  background-color: #505dec;
+}
+
 @media (max-width: 375px) {
   body {
     font-size: 14px;
@@ -67,6 +84,45 @@ a {
   h3 {
     font-size: 18px;
     line-height: 125%;
+  }
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
+}
+.header__logo {
+  flex-grow: 1;
+}
+.header__nav {
+  display: flex;
+  gap: 24px;
+  flex-grow: 0.5;
+}
+.header__item {
+  transition-duration: 0.3s;
+}
+.header__item:hover {
+  color: #1a1a1a;
+}
+.header__languages {
+  display: flex;
+  gap: 2px;
+}
+.header__languages-item {
+  cursor: pointer;
+}
+.header__languages-active {
+  color: #4754eb;
+}
+@media (max-width: 1000px) {
+  .header__nav {
+    display: none;
+  }
+  .header__languages {
+    display: none;
   }
 }
 

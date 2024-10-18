@@ -1,0 +1,44 @@
+.rate {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+
+  &__item {
+    box-shadow: $shadow;
+    background: #fafafa;
+    border-radius: $border-radius-large;
+
+    &-top {
+      background: #fdfdfd;
+      padding: 20px 24px;
+
+      span {
+        color: $color-blue;
+      }
+    }
+
+    &-main {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 24px 20px 24px 24px;
+    }
+  }
+
+  &__points-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__point {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__button {
+    margin-top: 16px;
+  }
+}

@@ -9,29 +9,216 @@
     <title>Instabot</title>
 </head>
 <body>
-<header class="header">
-    <div class="container">
-        <div class="header__inner">
-            <h1 class="header__logo logo">
-                <a href="/" class="header__logo-link logo-link">
-                    Инстаботы
-                </a>
-            </h1>
-            <nav class="header__nav">
-                <a href="#" class="header__item">О компании</a>
-                <a href="#" class="header__item">Тарифы</a>
-                <a href="#" class="header__item">Отзывы</a>
-                <a href="#" class="header__item">Q&A</a>
-                <a href="#" class="header__item">Обратная связь</a>
-            </nav>
-            <div class="header__languages">
-                <span class="header__languages-item header__languages-active">Ru</span>
-                <span>/</span>
-                <span class="header__languages-item">En</span>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <h1 class="header__logo logo">
+                    <a href="/" class="header__logo-link logo-link">
+                        Инстаботы
+                    </a>
+                </h1>
+                <nav class="header__nav">
+                    <a href="#" class="header__item">О компании</a>
+                    <a href="#" class="header__item">Тарифы</a>
+                    <a href="#" class="header__item">Отзывы</a>
+                    <a href="#" class="header__item">Q&A</a>
+                    <a href="#" class="header__item">Обратная связь</a>
+                </nav>
+                <div class="header__languages">
+                    <span class="header__languages-item header__languages-active">Ru</span>
+                    <span>/</span>
+                    <span class="header__languages-item">En</span>
+                </div>
+                <a class="header__button button">Вход и регистрация</a>
             </div>
-            <a class="header__button button">Вход и регистрация</a>
         </div>
-    </div>
-</header>
+    </header>
+    <main>
+        <section class="advantages">
+            <div class="container">
+                <h2 class="advantages__title">Наши преимущества</h2>
+                <ul class="advantages__list">
+                    <li class="advantages__item">
+                        <div class="advantages__item-top">
+                            <img src="images/advantages/teach-emoji.png" class="advantages__image">
+                            <h3 class="advantages__item-title">Легко и просто</h3>
+                        </div>
+                        <div class="advantages__item-main">
+                            <p class="advantages__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada gravida nisi sit felis odio. Sociis et pellentesque sed id. Congue arcu turpis est, aliquet porttitor. Congue arcu turpis est, aliquet porttitor.</p>
+                        </div>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-top">
+                            <img src="images/advantages/crazy-emoji.png" class="advantages__image">
+                            <h3 class="advantages__item-title">Быстро и доступно</h3>
+                        </div>
+                        <div class="advantages__item-main">
+                            <p class="advantages__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada gravida nisi sit felis odio. Sociis et pellentesque sed id. Congue arcu turpis est, aliquet porttitor. Congue arcu turpis est, aliquet porttitor.</p>
+                        </div>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-top">
+                            <img src="images/advantages/cool-emoji.png" class="advantages__image">
+                            <h3 class="advantages__item-title">А главное, качественно</h3>
+                        </div>
+                        <div class="advantages__item-main">
+                            <p class="advantages__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada gravida nisi sit felis odio. Sociis et pellentesque sed id. Congue arcu turpis est, aliquet porttitor. Congue arcu turpis est, aliquet porttitor.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="rate">
+            <div class="container">
+                <h2 class="rate__title">Наши тарифы</h2>
+                <ul class="rate__list">
+                    <li class="rate__item">
+                        <div class="rate__item-top">
+                            <h3 class="rate__item-name">Эконом</h3>
+                            <h3 class="rate__price"><span>2 990 руб</span>/месяц</h3>
+                        </div>
+                        <div class="rate__item-main">
+                            <ul class="rate__points-list">
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/check.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada gravida nisi sit felis odio.</p>
+                                </li>
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/cross.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/cross.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/cross.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                            </ul>
+                            <a href="#" class="rate__button button-white">Узнать подробнее</a>
+                        </div>
+                    </li>
+                    <li class="rate__item">
+                        <div class="rate__item-top">
+                            <h3 class="rate__item-name">Стандарт</h3>
+                            <h3 class="rate__price"><span>4 990 руб</span>/месяц</h3>
+                        </div>
+                        <div class="rate__item-main">
+                            <ul class="rate__points-list">
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/check.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada gravida nisi sit felis odio.</p>
+                                </li>
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/check.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/cross.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/cross.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                            </ul>
+                            <a href="#" class="rate__button button-white">Узнать подробнее</a>
+                        </div>
+                    </li>
+                    <li class="rate__item">
+                        <div class="rate__item-top">
+                            <h3 class="rate__item-name">Экстра</h3>
+                            <h3 class="rate__price"><span>8 990 руб</span>/месяц</h3>
+                        </div>
+                        <div class="rate__item-main">
+                            <ul class="rate__points-list">
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/check.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada gravida nisi sit felis odio.</p>
+                                </li>
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/check.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/check.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/cross.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                            </ul>
+                            <a href="#" class="rate__button button-white">Узнать подробнее</a>
+                        </div>
+                    </li>
+                    <li class="rate__item">
+                        <div class="rate__item-top">
+                            <h3 class="rate__item-name">Премиальный</h3>
+                            <h3 class="rate__price"><span>12 990 руб</span>/месяц</h3>
+                        </div>
+                        <div class="rate__item-main">
+                            <ul class="rate__points-list">
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/check.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada gravida nisi sit felis odio.</p>
+                                </li>
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/check.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/check.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                                <li class="rate__point">
+                                    <div class="rate__image-wrapper">
+                                        <img src="images/rate/check.png" class="rate__image">
+                                    </div>
+                                    <p class="rate__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </li>
+                            </ul>
+                            <a href="#" class="rate__button button-white">Узнать подробнее</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>
+
 </body>
 </html>
+

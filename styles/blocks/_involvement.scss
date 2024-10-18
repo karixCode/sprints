@@ -1,0 +1,63 @@
+.involvement {
+  background: url("../images/gradients/involvement-left.svg") bottom calc(50% - 100px) left -20% no-repeat,
+              url("../images/gradients/involvement-right.svg") top 40% right 20% no-repeat;
+  background-size: 50%, 30%;
+
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    height: 640px;
+    padding: 0 30px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 40px;
+  }
+
+  &__form {
+    display: flex;
+    border-radius: $border-radius;
+    background-color: $background;
+    margin-top: 40px;
+    max-width: 465px;
+    width: 100%;
+    padding: 8px 8px 8px 0;
+  }
+
+  &__text {
+    margin-top: 16px;
+
+    a {
+      color: $hover-blue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__mouse {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: auto;
+    color: $main-white;
+  }
+
+  &__image {
+    width: 100%;
+    margin: -80px 0 -80px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+
+}

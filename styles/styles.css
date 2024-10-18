@@ -57,11 +57,31 @@ ul {
   list-style-type: none;
 }
 
+input {
+  padding: 16px;
+  color: #808080;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 16px;
+  background-color: #f2f2f2;
+  max-width: 465px;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-size: 1em;
+}
+
 .wrapper {
   background-color: #ffffff;
   max-width: 1392px;
   margin: 0 auto;
   border-radius: 24px;
+  box-shadow: -2px 16px 24px 0 rgba(0, 0, 0, 0.05);
+  overflow-y: hidden;
 }
 
 .container {
@@ -78,6 +98,14 @@ ul {
   color: #4754eb;
 }
 
+.background {
+  padding: 0;
+}
+.background__wrapper {
+  padding: 5rem 0;
+  backdrop-filter: blur(240px);
+}
+
 .button {
   text-align: center;
   padding: 12px 24px;
@@ -86,6 +114,7 @@ ul {
   border-radius: 16px;
   cursor: pointer;
   transition-duration: 0.3s;
+  font-weight: 500;
 }
 .button:hover {
   background-color: #505dec;
@@ -98,6 +127,7 @@ ul {
   transition-duration: 0.3s;
   background-color: #ffffff;
   color: #4754eb;
+  font-weight: 500;
 }
 .button-white:hover {
   box-shadow: 0 4px 20px 0 rgba(25, 25, 25, 0.05);
@@ -160,6 +190,57 @@ ul {
   }
 }
 
+.involvement {
+  background: url("../images/gradients/involvement-left.svg") bottom calc(50% - 100px) left -20% no-repeat, url("../images/gradients/involvement-right.svg") top 40% right 20% no-repeat;
+  background-size: 50%, 30%;
+}
+.involvement__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  height: 640px;
+  padding: 0 30px;
+}
+.involvement__info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 40px;
+}
+.involvement__form {
+  display: flex;
+  border-radius: 16px;
+  background-color: #f2f2f2;
+  margin-top: 40px;
+  max-width: 465px;
+  width: 100%;
+  padding: 8px 8px 8px 0;
+}
+.involvement__text {
+  margin-top: 16px;
+}
+.involvement__text a {
+  color: #505dec;
+}
+.involvement__text a:hover {
+  text-decoration: underline;
+}
+.involvement__mouse {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: auto;
+  color: #ffffff;
+}
+.involvement__image {
+  width: 100%;
+  margin: -80px 0 -80px;
+}
+.involvement__image img {
+  width: 100%;
+}
+
 .advantages__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -180,6 +261,68 @@ ul {
 }
 .advantages__item-main {
   padding: 16px 24px 24px;
+}
+
+.work {
+  background: url("../images/gradients/work-left.svg") bottom calc(50% - 100px) left -20% no-repeat, url("../images/gradients/work-right.svg") top -170px right 20% no-repeat;
+  background-size: 50%, 30%;
+}
+.work__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  height: 100%;
+  padding-left: 30px;
+}
+.work__image {
+  height: 100%;
+  margin: 0 0 -80px;
+}
+.work__image img {
+  width: 100%;
+}
+.work__info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.work__list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  white-space: nowrap;
+  font-weight: 500;
+}
+.work__item-active {
+  color: #4754eb;
+}
+.work__item div {
+  width: 24px;
+  height: 1px;
+  background-color: #ffffff;
+}
+.work__subtitle {
+  margin-bottom: 24px;
+}
+.work__subtitle-text {
+  font-weight: 500;
+  font-size: 18px;
+  color: #4754eb;
+  margin-top: 0.5rem;
+}
+.work__description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 465px;
+}
+.work__button {
+  margin-top: 15%;
+  max-width: 247px;
+  padding: 16px 24px;
 }
 
 .rate__list {

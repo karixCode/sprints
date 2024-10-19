@@ -1,15 +1,18 @@
-.involvement {
-  background: url("../images/gradients/involvement-left.svg") bottom calc(50% - 100px) left -20% no-repeat,
-              url("../images/gradients/involvement-right.svg") top 40% right 20% no-repeat;
-  background-size: 50%, 30%;
-
-
+.sale {
   &__inner {
     display: flex;
     gap: 10px;
     align-items: center;
-    height: 640px;
     padding: 0 30px;
+  }
+
+  &__image {
+    width: 100%;
+    margin: -80px 0 -80px;
+
+    img {
+      width: 100%;
+    }
   }
 
   &__info {
@@ -44,23 +47,4 @@
       }
     }
   }
-
-  &__mouse {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    margin-top: auto;
-    color: $main-white;
-  }
-
-  &__image {
-    width: 100%;
-    margin: -80px 0 -80px;
-
-    img {
-      width: 100%;
-    }
-  }
-
-
 }

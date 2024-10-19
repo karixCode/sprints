@@ -1,0 +1,40 @@
+.footer {
+  background-color: $color-blue;
+  color: $main-white;
+  padding: 1.5rem 2rem;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    color: $main-white;
+  }
+
+  &__text {
+    color: $main-grey-light;
+    font-size: calc(1em - 2px);
+    line-height: 100%;
+    margin-top: 3px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    &:hover img{
+      transform: translateY(-4px);
+    }
+
+    &-small {
+      display: none;
+    }
+
+    & > img {
+      transition-duration: $transition-duration;
+    }
+  }
+}

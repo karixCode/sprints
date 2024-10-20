@@ -107,6 +107,7 @@ button {
   cursor: pointer;
   transition-duration: $transition-duration;
   font-weight: 500;
+  white-space: nowrap;
 
   &:hover {
     background-color: $hover-blue;
@@ -121,6 +122,8 @@ button {
     background-color: $main-white;
     color: $color-blue;
     font-weight: 500;
+    white-space: nowrap;
+
 
 
     &:hover {

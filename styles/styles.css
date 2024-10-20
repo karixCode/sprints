@@ -115,6 +115,7 @@ button {
   cursor: pointer;
   transition-duration: 0.3s;
   font-weight: 500;
+  white-space: nowrap;
 }
 .button:hover {
   background-color: #505dec;
@@ -128,6 +129,7 @@ button {
   background-color: #ffffff;
   color: #4754eb;
   font-weight: 500;
+  white-space: nowrap;
 }
 .button-white:hover {
   box-shadow: 0 4px 20px 0 rgba(25, 25, 25, 0.05);
@@ -531,6 +533,48 @@ button {
 .questions__icon {
   border-radius: 50%;
   transition-duration: 0.3s;
+}
+
+.feedback__inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+.feedback__info {
+  flex-basis: 465px;
+}
+.feedback__text {
+  margin-top: 1rem;
+}
+.feedback__form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.feedback__label {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.feedback__label-text {
+  font-size: 0.75rem;
+}
+.feedback__label-text a {
+  color: #505dec;
+}
+.feedback__label-text a:hover {
+  text-decoration: underline;
+}
+.feedback__image {
+  flex-basis: 500px;
+  width: 100%;
+  margin-right: calc(20% - 150px);
+}
+.feedback__image img {
+  width: 100%;
 }
 
 .footer {

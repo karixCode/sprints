@@ -28,7 +28,7 @@
     gap: 1rem;
 
     &-text {
-      font-size: 0.75rem;
+      font-size: 12px;
 
       a {
         color: $hover-blue;
@@ -47,6 +47,31 @@
 
     img {
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: $laptop) {
+  .feedback {
+
+    &__info {
+      flex-basis: 95%;
+    }
+    &__image {
+      display: none;
+    }
+
+    &__input {
+      max-width: none;
+    }
+  }
+}
+
+@media (max-width: $tablet-small) {
+  .feedback {
+    &__label {
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 }

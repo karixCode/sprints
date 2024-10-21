@@ -12,10 +12,11 @@ body {
   line-height: 135%;
   background-color: $background;
   padding: 24px;
+  overflow-x: hidden;
 }
 
 section {
-  padding: 5rem 0;
+  padding: $section-padding;
 }
 
 h1, h2, h3 {
@@ -56,7 +57,7 @@ input {
   border-radius: $border-radius;
   background-color: $background;
   max-width: 465px;
-  font-size: 18px;
+  font-size: 1em;
 }
 
 button {
@@ -76,7 +77,7 @@ button {
 
 .container {
   width: 100%;
-  padding: 0 24px;
+  padding: 0 1.5rem;
 
   & > h2 {
     margin-bottom: 2.5rem;
@@ -98,42 +99,36 @@ button {
   }
 }
 
-.button {
-  text-align: center;
-  padding: 12px 24px;
-  color: $main-white;
-  background-color: $color-blue;
-  border-radius: $border-radius;
-  cursor: pointer;
-  transition-duration: $transition-duration;
-  font-weight: 500;
-  white-space: nowrap;
-
-  &:hover {
-    background-color: $hover-blue;
+@media (max-width: $tablet) {
+  html {
+    font-size: 12px;
   }
 
-  &-white {
-    text-align: center;
-    padding: 12px 24px;
-    border-radius: $border-radius;
-    cursor: pointer;
-    transition-duration: $transition-duration;
-    background-color: $main-white;
-    color: $color-blue;
-    font-weight: 500;
-    white-space: nowrap;
+  body {
+    font-size: 16px;
+    line-height: 135%;
+  }
 
+  h1 {
+    font-size: 46px;
+  }
 
+  h2 {
+    font-size: 31px;
+    line-height: 125%;
+  }
 
-    &:hover {
-      box-shadow: $shadow;
-    }
+  h3 {
+    font-size: 21px;
+    line-height: 125%;
   }
 }
 
+@media (max-width: $tablet-small) {
+  html {
+    font-size: 8px;
+  }
 
-@media (max-width: $mobile) {
   body {
     font-size: 14px;
     line-height: 135%;
@@ -145,11 +140,9 @@ button {
 
   h2 {
     font-size: 26px;
-    line-height: 125%;
   }
 
   h3 {
     font-size: 18px;
-    line-height: 125%;
   }
 }

@@ -4,7 +4,11 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    padding: 30px;
+    padding: 2rem;
+  }
+
+  &__burger {
+    display: none;
   }
 
   &__logo {
@@ -43,13 +47,44 @@
     }
   }
 
-  @media (max-width: 1000px) {
+  &__profile {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1070px) {
+  .header {
+
+    &__menu {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    &__burger {
+      display: block;
+      margin-bottom: 4px;
+    }
+
     &__nav {
       display: none;
     }
 
     &__languages {
       display: none;
+    }
+  }
+}
+
+@media (max-width: $tablet-small) {
+  .header {
+    &__button {
+      display: none;
+    }
+
+    &__profile {
+      display: block;
     }
   }
 }

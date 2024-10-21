@@ -9,14 +9,14 @@
     gap: 10px;
     align-items: center;
     height: 640px;
-    padding: 0 30px;
+    padding: 0 2rem;
   }
 
   &__info {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding-top: 40px;
+    padding-top: 2.5rem;
   }
 
   &__title {
@@ -55,12 +55,43 @@
 
   &__image {
     width: 100%;
-    margin: -80px 0 -80px;
 
     img {
       width: 100%;
     }
   }
+}
 
+@media (max-width: $laptop) {
+  .involvement {
+    &__inner {
+      flex-direction: column;
+      height: 100%;
+      max-width: 800px;
+    }
 
+    &__info {
+      padding-top: 0;
+    }
+
+    &__title {
+      font-size: 46px;
+    }
+
+    &__image {
+      margin-bottom: -23%;
+    }
+
+    &__mouse {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $tablet-small) {
+  .involvement {
+    &__title {
+      font-size: 36px;
+    }
+  }
 }

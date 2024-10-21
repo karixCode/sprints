@@ -24,3 +24,11 @@
     }
   }
 }
+
+@media (max-width: $laptop) {
+  .advantages {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}

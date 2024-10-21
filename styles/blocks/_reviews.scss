@@ -68,8 +68,10 @@
   &__stars {
     margin-top: 16px;
   }
+}
 
-  @media (max-width: 1000px) {
+@media (max-width: $laptop) {
+  .reviews {
     &__list {
       display: grid;
       grid-template-columns: 1fr;

@@ -1,7 +1,7 @@
 .rate {
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 24px;
   }
 
@@ -27,6 +27,10 @@
     }
   }
 
+  &__price {
+    color: $main-grey;
+  }
+
   &__points-list {
     display: flex;
     flex-direction: column;
@@ -35,10 +39,27 @@
 
   &__point {
     display: flex;
+    align-items: center;
     gap: 15px;
   }
 
   &__button {
     margin-top: 16px;
+  }
+}
+
+@media (max-width: $laptop) {
+  .rate {
+    &__list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: $tablet-small) {
+  .rate {
+    &__list {
+      grid-template-columns: 1fr;
+    }
   }
 }

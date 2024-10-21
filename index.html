@@ -2,9 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css"/>
     <title>Instabot</title>
 </head>
@@ -13,9 +12,12 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <h1 class="header__logo logo">
-                    <a href="/" class="header__logo-link logo-link">Инстаботы</a>
-                </h1>
+                <div class="header__menu">
+                    <img class="header__burger" src="images/header/burger.svg" alt="burger menu">
+                    <h1 class="header__logo logo">
+                        <a href="/" class="header__logo-link logo-link">Инстаботы</a>
+                    </h1>
+                </div>
                 <nav class="header__nav">
                     <a href="#" class="header__item">О компании</a>
                     <a href="#" class="header__item">Тарифы</a>
@@ -29,6 +31,7 @@
                     <span class="header__languages-item">En</span>
                 </div>
                 <a class="header__button button">Вход и регистрация</a>
+                <img class="header__profile" src="images/header/profile.svg" alt="profile">
             </div>
         </div>
     </header>
@@ -103,7 +106,7 @@
                     <h2 class="work__title">Как мы работаем</h2>
                     <div class="work__inner">
                         <div class="work__image">
-                            <img src="images/work/phoneInArm.svg" alt="Phone in arm">
+                            <img src="images/work/phoneInArm.png" alt="Phone in arm">
                         </div>
                         <div class="work__info">
                             <ul class="work__list">
@@ -438,7 +441,7 @@
         <section class="feedback">
             <div class="container">
                 <div class="feedback__inner">
-                    <article class="feedback__info">
+                    <div class="feedback__info">
                         <h2 class="feedback__title">Обратная связь</h2>
                         <p class="feedback__text">
                             Поговорите с одним из наших сотрудников, чтобы узнать, сколько мы можем получить для вас целевой аудитории за месяц с минимальными усилиями с вашей стороны
@@ -450,13 +453,13 @@
                             <input class="feedback__input" type="text" placeholder="Что вы бы хотели спросить о росте в Instagram">
                             <label class="feedback__label">
                                 <button class="feedback__button button">Отправить заявку</button>
-                                <span class="feedback__label-text">Нажимая на кнопку вы соглашаетесь на обработку <a href="/">персональных данных</a> </span>
+                                <span class="feedback__label-text">Нажимая на кнопку вы соглашаетесь на <br> обработку <a href="/">персональных данных</a> </span>
                             </label>
                         </form>
-                    </article>
-                    <article class="feedback__image">
+                    </div>
+                    <div class="feedback__image">
                         <img src="images/feedback/man.png" alt="man">
-                    </article>
+                    </div>
                 </div>
             </div>
         </section>
@@ -479,7 +482,6 @@
         </footer>
     </main>
 </div>
-
 </body>
 </html>
 

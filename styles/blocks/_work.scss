@@ -9,13 +9,12 @@
     gap: 24px;
     align-items: center;
     height: 100%;
-    padding-left: 30px;
+    padding: 0 2rem;
 
   }
 
   &__image {
     height: 100%;
-    margin: 0 0 -80px;
 
     img {
       width: 100%;
@@ -31,13 +30,11 @@
   &__list {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 1rem;
     margin-bottom: 30px;
     color: $main-white;
     white-space: nowrap;
     font-weight: 500;
-
-
   }
 
   &__item {
@@ -46,7 +43,7 @@
     }
 
     div {
-      width: 24px;
+      width: 1.5rem;
       height: 1px;
       background-color: $main-white;
     }
@@ -68,13 +65,40 @@
     flex-direction: column;
     gap: 16px;
     max-width: 465px;
-
   }
 
   &__button {
     margin-top: 15%;
     max-width: 247px;
-    padding: 16px 24px;
   }
+}
 
+@media (max-width: $laptop) {
+  .work {
+    background: url("../images/gradients/work-left.svg") bottom calc(50% - 100px) left -20% no-repeat,
+                url("../images/gradients/work-right.svg") top 50% right 20% no-repeat;
+    background-size: 50%, 50%;
+
+
+    &__inner {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &__description {
+      max-width: 90%;
+    }
+
+    &__button {
+      margin-top: 7%;
+    }
+  }
+}
+
+@media (max-width: $tablet-small) {
+  .work {
+    &__button {
+      max-width: 100%;
+    }
+  }
 }

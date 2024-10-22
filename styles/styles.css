@@ -677,6 +677,7 @@ button {
   align-items: center;
   gap: 20px;
   justify-content: space-between;
+  padding: 0 2rem;
 }
 .feedback__info {
   flex-basis: 465px;

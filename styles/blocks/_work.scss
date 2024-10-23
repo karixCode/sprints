@@ -1,0 +1,104 @@
+.work {
+  background: url("../images/gradients/work-left.svg") bottom calc(50% - 100px) left -20% no-repeat,
+              url("../images/gradients/work-right.svg") top -170px right 20% no-repeat;
+  background-size: 50%, 30%;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+
+  }
+
+  &__image {
+    height: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 30px;
+    color: $main-white;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  &__item {
+    &-active {
+      color: $color-blue;
+    }
+
+    div {
+      width: 1.5rem;
+      height: 1px;
+      background-color: $main-white;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 24px;
+
+    &-text {
+      font-weight: 500;
+      font-size: 18px;
+      color: $color-blue;
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 465px;
+  }
+
+  &__button {
+    margin-top: 15%;
+    max-width: 247px;
+  }
+}
+
+@media (max-width: $laptop) {
+  .work {
+    background: url("../images/gradients/work-left.svg") bottom calc(50% - 100px) left -20% no-repeat,
+                url("../images/gradients/work-right.svg") top 50% right 20% no-repeat;
+    background-size: 50%, 50%;
+
+
+    &__inner {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &__description {
+      max-width: 90%;
+    }
+
+    &__button {
+      margin-top: 7%;
+    }
+  }
+}
+
+@media (max-width: $tablet-small) {
+  .work {
+    &__button {
+      max-width: 100%;
+    }
+  }
+}

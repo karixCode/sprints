@@ -1,0 +1,68 @@
+.questions {
+  background: url("../images/gradients/questions-right.svg") top 0 right 0 no-repeat,
+              url("../images/gradients/questions-left.svg") bottom -200px left 0 no-repeat;
+  background-size: calc(20% + 100px), 350px;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__item {
+    border-radius: $border-radius;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    border: 1px solid $main-white;
+    overflow: hidden;
+    transition-duration: $transition-duration;
+
+    &:hover {
+      box-shadow: $shadow;
+      .questions__icon {
+        box-shadow: $shadow;
+      }
+    }
+
+    &-active {
+      .questions {
+        &__main {
+          display: block;
+          padding: 1rem 3rem 1.5rem 1.5rem;
+        }
+
+        &__icon {
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  &__header {
+    padding: 1.5rem 2rem;
+    background-color: $main-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__name {
+    font-size: 36px;
+  }
+
+  &__main {
+    display: none;
+  }
+
+  &__icon {
+    border-radius: 50%;
+    transition-duration: $transition-duration;
+  }
+}
+
+@media (max-width: $tablet) {
+  .questions {
+    &__name {
+      font-size: 1.7em;
+    }
+  }
+}

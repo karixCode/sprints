@@ -1,0 +1,65 @@
+.rate {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+
+  &__item {
+    box-shadow: $shadow;
+    background: #fafafa;
+    border-radius: $border-radius-large;
+
+    &-top {
+      background: #fdfdfd;
+      padding: 20px 24px;
+
+      span {
+        color: $color-blue;
+      }
+    }
+
+    &-main {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 24px 20px 24px 24px;
+    }
+  }
+
+  &__price {
+    color: $main-grey;
+  }
+
+  &__points-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__point {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__button {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: $laptop) {
+  .rate {
+    &__list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: $tablet-small) {
+  .rate {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}

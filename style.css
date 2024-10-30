@@ -1,0 +1,46 @@
+h2 {
+    text-align: center;
+}
+
+input, button {
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+p {
+    display: inline;
+}
+
+.references-wrapper > a {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.references-wrapper > p {
+    margin-left: 8px;
+}
+
+.references-wrapper:has(> a) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.colors-element {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.colors-element > input {
+    margin-bottom: 0;
+}

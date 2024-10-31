@@ -12,13 +12,20 @@ form.addEventListener('change', (event) => {
 
 const readFile = (file) => {
     let reader = new FileReader();
-    reader.readAsText(file);
+
+    file ? reader.readAsText(file) : null;
 
     reader.onload = () => {
-        const fileJson= JSON.parse(reader.result)
-        parseToHtml(fileJson)
-        resetButton.classList.remove('disabled')
-        labelForm.textContent = 'JSON обработан:'
+        try {
+            const fileJson= JSON.parse(reader.result)
+            parseToHtml(fileJson)
+            resetButton.classList.remove('disabled')
+            labelForm.textContent = 'JSON обработан:'
+        }
+        catch(error) {
+            console.error(error);
+            alert("Ошибка! Возможно ваш файл не является json.");
+        }
     }
 
     reader.onerror = () => console.log(reader.error);

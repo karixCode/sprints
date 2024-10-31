@@ -5,13 +5,13 @@ const resetButton  = document.querySelector('#reset-button');
 const applicationForm = document.querySelector('#formApplication');
 
 form.addEventListener('change', (event) => {
-    let file = event.target.files[0];
+    const file = event.target.files[0];
 
     readFile(file);
 })
 
 const readFile = (file) => {
-    let reader = new FileReader();
+    const reader = new FileReader();
 
     file ? reader.readAsText(file) : null;
 
@@ -86,7 +86,7 @@ createFields = (fields) => {
 
             const input = field['input']['technologies'] ? createTechnologies(field['input']['technologies']) : document.createElement(inputType)
 
-            for (let [attributeKey, attributeValue] of Object.entries(field['input'])) {
+            for (const [attributeKey, attributeValue] of Object.entries(field['input'])) {
                 attributeKey === 'filetype'
                     ? input.setAttribute('accept', attributeValue.map(fileType => '.' + fileType).join(', '))
                     : input.setAttribute(attributeKey, attributeValue)
@@ -151,7 +151,7 @@ const createReferences = (references) => {
         if(reference.input) {
             const input = document.createElement('input')
 
-            for (let [attributeKey, attributeValue] of Object.entries(reference['input'])) {
+            for (const [attributeKey, attributeValue] of Object.entries(reference['input'])) {
                 input.setAttribute(attributeKey, attributeValue)
             }
 

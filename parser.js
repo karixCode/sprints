@@ -34,8 +34,6 @@ const readFile = (file) => {
 const parseToHtml = (fileJson) => {
     reset();
 
-    const { name, fields, references, buttons } = fileJson;
-
     const creators = {
         name: createName,
         fields: createFields,
@@ -43,8 +41,8 @@ const parseToHtml = (fileJson) => {
         buttons: createButtons,
     }
 
-    for (const [key, value] of Object.entries({ name, fields, references, buttons })) {
-        if (value) creators[key](value);
+    for (const [key, value] of Object.entries(fileJson)) {
+        value ? creators[key](value) : null;
     }
 }
 
@@ -80,7 +78,7 @@ createFields = (fields) => {
             })
             applicationForm.appendChild(colorsWrapper)
         } else {
-            const inputType = field['input']['type'] === 'textarea'
+            const inputType = field.input.type === 'textarea'
                 ? 'textarea'
                 : 'input'
 
@@ -90,6 +88,8 @@ createFields = (fields) => {
                 attributeKey === 'filetype'
                     ? input.setAttribute('accept', attributeValue.map(fileType => '.' + fileType).join(', '))
                     : input.setAttribute(attributeKey, attributeValue)
+
+                if(attributeKey === 'mask') input.setAttribute('placeholder', attributeValue)
             }
 
             input.classList.add(

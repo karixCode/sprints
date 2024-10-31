@@ -73,10 +73,16 @@ createFields = (fields) => {
             })
             applicationForm.appendChild(colorsWrapper)
         } else {
-            const input = field['input']['technologies'] ? createTechnologies(field['input']['technologies']) : document.createElement('input')
+            const inputType = field['input']['type'] === 'textarea'
+                ? 'textarea'
+                : 'input'
+
+            const input = field['input']['technologies'] ? createTechnologies(field['input']['technologies']) : document.createElement(inputType)
 
             for (let [attributeKey, attributeValue] of Object.entries(field['input'])) {
-                input.setAttribute(attributeKey, attributeValue)
+                attributeKey === 'filetype'
+                    ? input.setAttribute('accept', attributeValue.map(fileType => '.' + fileType).join(', '))
+                    : input.setAttribute(attributeKey, attributeValue)
             }
 
             input.classList.add(
@@ -162,8 +168,8 @@ const createReferences = (references) => {
                 referencesWrapper.appendChild(referenceElement)
             }
         }
-        applicationForm.appendChild(referencesWrapper)
     })
+    applicationForm.appendChild(referencesWrapper)
 }
 
 const reset = () => {

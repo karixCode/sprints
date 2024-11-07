@@ -58,6 +58,19 @@ input {
   background-color: $background;
   max-width: 465px;
   font-size: 1em;
+
+  &::placeholder{
+    color: inherit;
+    transition-duration: $transition-duration;
+  }
+
+  &:hover {
+    color: $hover-blue;
+  }
+
+  &:not(:placeholder-shown) {
+    color: $hover-blue;
+  }
 }
 
 button {

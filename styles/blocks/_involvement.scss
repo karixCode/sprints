@@ -46,12 +46,27 @@
   }
 
   &__mouse {
-    display: flex;
-    gap: 8px;
-    align-items: center;
     margin-top: auto;
-    color: $main-white;
+    &-link {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      color: $main-white;
+
+      & rect, & path, & p {
+        transition-duration: $transition-duration;
+      }
+
+      &:hover {
+          color: $hover-blue;
+
+        & rect, & path {
+          stroke: $hover-blue;
+        }
+      }
+    }
   }
+
 
   &__image {
     width: 100%;

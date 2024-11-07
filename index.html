@@ -49,8 +49,13 @@
                             <p class="involvement__text">Нажимая на кнопку вы соглашаетесь на обработку <br> <a href="/">персональных
                                 данных</a></p>
                             <div class="involvement__mouse">
-                                <img class="involvement__mouse-image" src="images/involvement/mouse.svg" alt="mouse">
-                                <p class="involvement__mouse-text">Листайте дальше</p>
+                                <a class="involvement__mouse-link" href="#advantages">
+                                    <svg class="involvement__mouse-image" width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="1" y="1" width="22" height="30" rx="11" stroke="#fff" stroke-width="2" />
+                                        <path d="M12 13L12 7" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                    <p class="involvement__mouse-text">Листайте дальше</p>
+                                </a>
                             </div>
                         </div>
                         <div class="involvement__image">
@@ -60,7 +65,7 @@
                 </div>
             </div>
         </section>
-        <section class="advantages">
+        <section class="advantages" id="advantages">
             <div class="container">
                 <h2 class="advantages__title">Наши преимущества</h2>
                 <div class="advantages__list">
@@ -453,7 +458,7 @@
                             <input class="feedback__input" type="text" placeholder="Что вы бы хотели спросить о росте в Instagram">
                             <label class="feedback__label">
                                 <button class="feedback__button button">Отправить заявку</button>
-                                <span class="feedback__label-text">Нажимая на кнопку вы соглашаетесь на <br> обработку <a href="/">персональных данных</a> </span>
+                                <span class="feedback__label-text">Нажимая на кнопку вы соглашаетесь на обработку <a href="/">персональных данных</a> </span>
                             </label>
                         </form>
                     </div>
@@ -467,15 +472,17 @@
             <div class="container">
                 <div class="footer__inner">
                     <div class="footer__info">
-                        <h1 class="footer__logo logo">
+                        <h2 class="footer__logo logo">
                             <a href="/" class="footer__logo-link logo-link">Инстаботы</a>
-                        </h1>
+                        </h2>
                         <p class="footer__text">&copy;2021 Copyright reserved <br> Instabots</p>
                     </div>
                     <a class="footer__link" href="#header">
                         <span class="footer__link-big">Вернуться наверх</span>
                         <span class="footer__link-small">Наверх</span>
-                        <img src="images/footer/arrow-up.svg" alt="arrow-up">
+                        <svg width="16" height="16" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17C7 17.5523 7.44772 18 8 18C8.55228 18 9 17.5523 9 17L7 17ZM8.70711 0.292892C8.31658 -0.0976314 7.68342 -0.0976315 7.29289 0.292892L0.928933 6.65685C0.538408 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292892ZM9 17L9 1L7 1L7 17L9 17Z" fill="white" />
+                        </svg>
                     </a>
                 </div>
             </div>

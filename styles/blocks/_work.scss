@@ -38,6 +38,8 @@
   }
 
   &__item {
+    transition-duration: $transition-duration;
+
     &-active {
       color: $color-blue;
     }
@@ -46,6 +48,10 @@
       width: 1.5rem;
       height: 1px;
       background-color: $main-white;
+    }
+
+    &:hover {
+      color: $hover-blue;
     }
   }
 

@@ -25,7 +25,11 @@
     transition-duration: $transition-duration;
 
     &:hover {
-      color: $main-black;
+      color: $hover-blue;
+    }
+
+    &:active {
+      color: $inactive-blue;
     }
   }
 
@@ -38,7 +42,11 @@
       transition-duration: $transition-duration;
 
       &:hover {
-        color: $main-black;
+        color: $hover-blue;
+      }
+
+      &:active {
+
       }
     }
 

@@ -9,6 +9,8 @@
     box-shadow: $shadow;
     background: #fafafa;
     border-radius: $border-radius-large;
+    overflow: hidden;
+    transition-duration: $transition-duration;
 
     &-top {
       background: #fdfdfd;
@@ -24,6 +26,11 @@
       justify-content: space-between;
       flex-direction: column;
       padding: 24px 20px 24px 24px;
+    }
+
+    &:hover {
+      box-shadow: -10px 10px 25px 0 rgba(0, 0, 0, 0.25);
+      transform: scale(1, 1.01) translateY(4px);
     }
   }
 

@@ -80,6 +80,7 @@ button {
 }
 
 .wrapper {
+  position: relative;
   background-color: $main-white;
   max-width: 1392px;
   margin: 0 auto;
@@ -109,6 +110,28 @@ button {
   &__wrapper {
     padding: 5rem 0;
     backdrop-filter: blur(240px);
+  }
+}
+
+.languages {
+  display: flex;
+  gap: 2px;
+
+  &-item{
+    cursor: pointer;
+    transition-duration: $transition-duration;
+
+    &:hover {
+      color: $hover-blue;
+    }
+
+    &:active {
+
+    }
+  }
+
+  &-active {
+    color: $color-blue;
   }
 }
 

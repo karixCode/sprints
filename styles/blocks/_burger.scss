@@ -1,0 +1,39 @@
+.burger {
+  width: 100vw;
+  height: 100vh;
+  padding: 1.5rem;
+  background-color: $main-white;
+  position: absolute;
+  //left: -100vw;
+  z-index: 100;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+  }
+
+  &__title {
+    color: $main-grey;
+    margin-bottom: 1.5rem;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &-item {
+      font-weight: 500;
+      font-size: 3rem;
+      line-height: 125%;
+      color: $main-black;
+    }
+  }
+
+  &__languages {
+    margin-top: auto;
+    font-weight: 500;
+    font-size: 3rem;
+  }
+}

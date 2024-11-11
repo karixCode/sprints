@@ -33,28 +33,6 @@
     }
   }
 
-  &__languages {
-    display: flex;
-    gap: 2px;
-
-    &-item{
-      cursor: pointer;
-      transition-duration: $transition-duration;
-
-      &:hover {
-        color: $hover-blue;
-      }
-
-      &:active {
-
-      }
-    }
-
-    &-active {
-      color: $color-blue;
-    }
-  }
-
   &__profile {
     display: none;
   }
@@ -63,7 +41,6 @@
 
 @media (max-width: 1070px) {
   .header {
-
     &__menu {
       display: flex;
       gap: 16px;

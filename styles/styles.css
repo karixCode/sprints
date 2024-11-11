@@ -128,6 +128,7 @@ button {
 }
 
 .wrapper {
+  position: relative;
   background-color: #ffffff;
   max-width: 1392px;
   margin: 0 auto;
@@ -156,6 +157,21 @@ button {
 .background__wrapper {
   padding: 5rem 0;
   backdrop-filter: blur(240px);
+}
+
+.languages {
+  display: flex;
+  gap: 2px;
+}
+.languages-item {
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.languages-item:hover {
+  color: #505dec;
+}
+.languages-active {
+  color: #4754eb;
 }
 
 @media (max-width: 768px) {
@@ -222,20 +238,6 @@ button {
 }
 .header__item:active {
   color: #3c49dd;
-}
-.header__languages {
-  display: flex;
-  gap: 2px;
-}
-.header__languages-item {
-  cursor: pointer;
-  transition-duration: 0.3s;
-}
-.header__languages-item:hover {
-  color: #505dec;
-}
-.header__languages-active {
-  color: #4754eb;
 }
 .header__profile {
   display: none;
@@ -828,6 +830,39 @@ button {
   .footer__link-small {
     display: inline;
   }
+}
+.burger {
+  width: 100vw;
+  height: 100vh;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 100;
+}
+.burger__inner {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+.burger__title {
+  color: #808080;
+  margin-bottom: 1.5rem;
+}
+.burger__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.burger__nav-item {
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 125%;
+  color: #1a1a1a;
+}
+.burger__languages {
+  margin-top: auto;
+  font-weight: 500;
+  font-size: 3rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

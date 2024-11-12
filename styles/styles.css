@@ -837,7 +837,12 @@ button {
   padding: 1.5rem;
   background-color: #ffffff;
   position: absolute;
+  left: -100vw;
   z-index: 100;
+  transition: all 0.5s ease-in-out;
+}
+.burger-open {
+  left: 0;
 }
 .burger__inner {
   display: flex;

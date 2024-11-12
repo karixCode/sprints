@@ -4,8 +4,13 @@
   padding: 1.5rem;
   background-color: $main-white;
   position: absolute;
-  //left: -100vw;
+  left: -100vw;
   z-index: 100;
+  transition: all .5s ease-in-out;
+
+  &-open {
+    left: 0;
+  }
 
   &__inner {
     display: flex;

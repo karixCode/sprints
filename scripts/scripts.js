@@ -4,6 +4,8 @@ const burgerButton = document.querySelector('.header__burger')
 const burger = document.querySelector('.burger')
 const emoji = document.querySelectorAll('.emoji')
 const questionItems = document.querySelectorAll('.questions__item')
+const slides = document.querySelectorAll('.work__slides-item')
+const titlesSlide = document.querySelectorAll('.work__item-text')
 
 // Смена языка
 languageBlocks.forEach(languageBlock => {
@@ -55,3 +57,20 @@ questionItems.forEach(questionItem => {
         questionItem.classList.toggle('questions__item-active')
     })
 })
+
+// Слайдер
+const goToSlide = function (numberSlide) {
+    titlesSlide.forEach(title => title.classList.remove('work__item-active'))
+    titlesSlide[numberSlide].classList.add('work__item-active')
+
+    slides.forEach((slideEl, index) => slideEl.style.transform = `translateX(${100 * (index - numberSlide)}%)`)
+};
+
+titlesSlide.forEach(title => {
+    title.addEventListener('click', (e) => {
+        const numberSlide = title.dataset.numberSlide
+        goToSlide(numberSlide)
+    })
+})
+
+goToSlide(0)

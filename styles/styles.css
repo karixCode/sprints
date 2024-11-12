@@ -433,6 +433,19 @@ button {
 .work__item:hover {
   color: #505dec;
 }
+.work__slides {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 350px;
+}
+.work__slides-item {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: translateX(100%);
+  transition-duration: 0.5s;
+}
 .work__subtitle {
   margin-bottom: 24px;
 }
@@ -869,6 +882,13 @@ button {
   font-size: 3rem;
   line-height: 125%;
   color: #1a1a1a;
+  transition-duration: 0.3s;
+}
+.burger__nav-item:hover {
+  color: #505dec;
+}
+.burger__nav-item:active {
+  color: #3c49dd;
 }
 .burger__languages {
   margin-top: auto;

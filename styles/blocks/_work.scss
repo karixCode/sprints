@@ -55,6 +55,21 @@
     }
   }
 
+  &__slides{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 350px;
+
+    &-item {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      transform: translateX(100%);
+      transition-duration: .5s;
+    }
+  }
+
   &__subtitle {
     margin-bottom: 24px;
 

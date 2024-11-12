@@ -3,6 +3,7 @@ const languageItems = document.querySelectorAll('.languages-item')
 const burgerButton = document.querySelector('.header__burger')
 const burger = document.querySelector('.burger')
 const emoji = document.querySelectorAll('.emoji')
+const questionItems = document.querySelectorAll('.questions__item')
 
 // Смена языка
 languageBlocks.forEach(languageBlock => {
@@ -46,4 +47,11 @@ emoji.forEach(emoji => {
     emoji.addEventListener('mouseleave', () => replaceEmoji(imageSrc))
 
     window.innerWidth <= 768 ? replaceEmoji(gifSrc) : null
+})
+
+// Открытие/закрытие ответов на вопросы(аккордеон)
+questionItems.forEach(questionItem => {
+    questionItem.addEventListener('click', (e) => {
+        questionItem.classList.toggle('questions__item-active')
+    })
 })

@@ -34,7 +34,6 @@
     margin-bottom: 30px;
     color: $main-white;
     white-space: nowrap;
-    font-weight: 500;
   }
 
   &__item {
@@ -42,6 +41,11 @@
 
     &-active {
       color: $color-blue;
+      font-weight: 500;
+    }
+
+    &-text {
+      cursor: pointer;
     }
 
     div {

@@ -6,6 +6,7 @@ const emoji = document.querySelectorAll('.emoji')
 const questionItems = document.querySelectorAll('.questions__item')
 const slides = document.querySelectorAll('.work__slides-item')
 const titlesSlide = document.querySelectorAll('.work__item-text')
+const sections = document.querySelectorAll('section')
 
 // Смена языка
 languageBlocks.forEach(languageBlock => {
@@ -74,3 +75,26 @@ titlesSlide.forEach(title => {
 })
 
 goToSlide(0)
+
+// Плавная прокрутка до секции
+scrollToSection = (element, toTop=false) => {
+    toTop
+        ? window.scrollTo({ top: 0, behavior: 'smooth' })
+        : element.scrollIntoView({ behavior: 'smooth', block: 'center' })
+}
+
+const handleIntersection = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target === sections[0] ? scrollToSection(entry.target, true) : scrollToSection(entry.target)
+        }
+    })
+}
+
+const observerOptions = {
+    threshold: 0.5,
+}
+
+const observer = new IntersectionObserver(handleIntersection, observerOptions)
+
+sections.forEach(section => observer.observe(section))

@@ -251,6 +251,7 @@ button {
   }
   .header__burger {
     display: block;
+    cursor: pointer;
     margin-bottom: 4px;
   }
   .header__nav {
@@ -417,13 +418,16 @@ button {
   margin-bottom: 30px;
   color: #ffffff;
   white-space: nowrap;
-  font-weight: 500;
 }
 .work__item {
   transition-duration: 0.3s;
 }
 .work__item-active {
   color: #4754eb;
+  font-weight: 500;
+}
+.work__item-text {
+  cursor: pointer;
 }
 .work__item div {
   width: 1.5rem;

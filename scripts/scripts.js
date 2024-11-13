@@ -7,6 +7,9 @@ const questionItems = document.querySelectorAll('.questions__item')
 const slides = document.querySelectorAll('.work__slides-item')
 const titlesSlide = document.querySelectorAll('.work__item-text')
 const sections = document.querySelectorAll('section')
+const reviewsBlock = document.querySelector('.reviews__list')
+const reviews = document.querySelectorAll('.reviews__item')
+const reviewsButton = document.querySelector('.reviews__button')
 
 // Смена языка
 languageBlocks.forEach(languageBlock => {
@@ -23,7 +26,7 @@ languageBlocks.forEach(languageBlock => {
 })
 
 // Открытие/закрытие burger
-burgerButton.addEventListener('click', (e) => {
+burgerButton.addEventListener('click', () => {
     burgerButton.setAttribute('src', burger.classList.contains('burger-open') ? 'images/header/burger.svg' : 'images/header/cross.svg')
     burger.classList.toggle('burger-open')
 })
@@ -54,7 +57,7 @@ emoji.forEach(emoji => {
 
 // Открытие/закрытие ответов на вопросы(аккордеон)
 questionItems.forEach(questionItem => {
-    questionItem.addEventListener('click', (e) => {
+    questionItem.addEventListener('click', () => {
         questionItem.classList.toggle('questions__item-active')
     })
 })
@@ -68,7 +71,7 @@ const goToSlide = function (numberSlide) {
 };
 
 titlesSlide.forEach(title => {
-    title.addEventListener('click', (e) => {
+    title.addEventListener('click', () => {
         const numberSlide = title.dataset.numberSlide
         goToSlide(numberSlide)
     })
@@ -98,3 +101,36 @@ const observerOptions = {
 const observer = new IntersectionObserver(handleIntersection, observerOptions)
 
 sections.forEach(section => observer.observe(section))
+
+// Анимация отзывов
+const rotateReviews = () => {
+    reviews.forEach(review => {
+        const currentClass = Array.from(review.classList).find(reviewClass => reviewClass.startsWith('reviews__item-'))
+
+            const currentNumber = parseInt(currentClass.split('-')[1])
+            const nextNumber = currentNumber === reviews.length ? 1 : currentNumber + 1
+
+            review.classList.replace(currentClass, `reviews__item-${nextNumber}`)
+    })
+}
+
+reviews.forEach(review => review.addEventListener('click', rotateReviews))
+
+// Структурирование отзывов
+reviewsButton.addEventListener('click', () => {
+    reviewsBlock.classList.add('reviews__list-grid')
+
+    const infoText = document.createElement('p')
+    infoText.textContent = 'Котики структурированы!'
+    infoText.classList.add('reviews__structure-text')
+
+    reviewsButton.remove()
+
+    setTimeout(() => reviews.forEach(review => {
+        review.style.position = 'static'
+        reviewsBlock.style.height = 'auto'
+        reviewsBlock.appendChild(infoText)
+    }), 300)
+
+    reviews.forEach(review => review.removeEventListener('click', rotateReviews))
+})

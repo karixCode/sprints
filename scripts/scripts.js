@@ -134,3 +134,28 @@ reviewsButton.addEventListener('click', () => {
 
     reviews.forEach(review => review.removeEventListener('click', rotateReviews))
 })
+
+//sale image rotate
+const saleImage = document.querySelector('.sale__image')
+
+const saleHandleIntersection = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Попал в блок снизу
+            if (saleImage.classList.contains('sale__image-down')) saleImage.classList.remove('sale__image-down')
+            // Попал в блок сверху
+            else saleImage.classList.add('sale__image-active')
+        }
+
+        if (!entry.isIntersecting) {
+            // Вышел из блока вверх
+            if (entry.boundingClientRect.top > 0 && saleImage.classList.contains('sale__image-active')) {
+                saleImage.classList.remove('sale__image-active')
+            // Вышел из блока вниз
+            } else if (entry.boundingClientRect.top < 0) saleImage.classList.add('sale__image-active', 'sale__image-down')
+        }
+    })
+}
+
+const saleObserver = new IntersectionObserver(saleHandleIntersection, observerOptions)
+saleObserver.observe(saleImage)

@@ -1,0 +1,127 @@
+.reviews {
+  background: url("../images/gradients/reviews-top-right.svg") top -170px right 0 no-repeat,
+              url("../images/gradients/reviews-bottom-right.svg") bottom -200px right 0 no-repeat;
+  background-size: 400px, 350px;
+
+  &__wrapper {
+    min-height: 800px;
+  }
+
+  &__list {
+    position: relative;
+    height: 560px;
+    transition-duration: $transition-duration;
+
+    &-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+
+      & #review-1 {
+        top: 0;
+        left: 0;
+      }
+      & #review-2 {
+        top: 0;
+        left: 51%;
+      }
+      & #review-3 {
+        top: 53%;
+        left: 0;
+      }
+      & #review-4 {
+        top: 53%;
+        left: 51%;
+      }
+    }
+  }
+
+  &__item-1 {
+    top: 56px;
+    left: 3%;
+  }
+  &__item-2 {
+    top: 0;
+    left: 25%;
+    z-index: 10;
+  }
+  &__item-3 {
+    top: 36%;
+    left: 50%;
+    z-index: 5;
+  }
+  &__item-4 {
+    top: 55%;
+    left: calc(20% - 70px);
+  }
+
+  &__item {
+    box-shadow: $shadow;
+    background: #fafafa;
+    border-radius: $border-radius;
+    overflow: hidden;
+    max-width: 630px;
+    position: absolute;
+    transition-duration: $transition-duration;
+
+    &-top {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px 16px 16px;
+      background: #fdfdfd;
+    }
+
+    &-main {
+      padding: 16px 24px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 0;
+    right: 60px;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__image {
+    border-radius: 50%;
+  }
+
+  &__stars {
+    margin-top: 16px;
+  }
+
+  &__structure-text {
+    font-size: 1.5rem;
+    grid-column: 1/-1;
+    text-align: center;
+  }
+}
+
+@media (max-width: $laptop) {
+  .reviews {
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      height: 100%;
+    }
+
+    &__item {
+      max-width: none;
+      position: static;
+    }
+
+    &__button {
+      display: none;
+    }
+  }
+}
+

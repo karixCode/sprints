@@ -1,0 +1,53 @@
+.burger {
+  width: 100vw;
+  height: 100vh;
+  padding: 1.5rem;
+  background-color: $main-white;
+  position: absolute;
+  left: -100vw;
+  z-index: 100;
+  transition: all .5s ease-in-out;
+
+  &-open {
+    left: 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+  }
+
+  &__title {
+    color: $main-grey;
+    margin-bottom: 1.5rem;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &-item {
+      font-weight: 500;
+      font-size: 3rem;
+      line-height: 125%;
+      color: $main-black;
+      transition-duration: $transition-duration;
+
+      &:hover {
+        color: $hover-blue;
+      }
+
+      &:active {
+        color: $inactive-blue;
+      }
+    }
+  }
+
+  &__languages {
+    margin-top: auto;
+    font-weight: 500;
+    font-size: 3rem;
+  }
+}

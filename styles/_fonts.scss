@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "VisueltPro";
+    src: local("VisueltPro"),
+        url("../fonts/VisueltPro-Regular.woff2") format('woff2'),
+        url("../fonts/VisueltPro-Regular.woff") format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "VisueltPro";
+    src: local("VisueltPro"),
+    url("../fonts/VisueltPro-Medium.woff2") format('woff2'),
+    url("../fonts/VisueltPro-Medium.woff") format('woff');
+    font-weight: 500;
+}

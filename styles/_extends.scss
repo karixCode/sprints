@@ -1,0 +1,48 @@
+%button {
+  text-align: center;
+  padding: 12px 24px;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition-duration: $transition-duration;
+  font-weight: 500;
+  white-space: nowrap;
+
+  &:hover {
+    padding: 10px 24px 14px;
+  }
+  
+  @media (max-width: $tablet-small) {
+    & {
+      padding: 10px 24px;
+    }
+  }
+}
+
+.button {
+  @extend %button;
+  color: $main-white;
+  background-color: $color-blue;
+
+  &:hover {
+    box-shadow: 0 24px 24px 0 rgba(80, 93, 236, 0.25);
+    background: $hover-blue;
+  }
+
+  &:active {
+    background: $inactive-blue;
+  }
+}
+
+.button-white {
+  @extend %button;
+  color: $color-blue;
+  background: $main-white;
+
+  &:hover {
+    box-shadow: 0 24px 24px 0 rgba(80, 93, 236, 0.25);
+  }
+
+  &:active {
+    box-shadow: 0 8px 24px 0 rgba(60, 73, 221, 0.1);
+  }
+}
